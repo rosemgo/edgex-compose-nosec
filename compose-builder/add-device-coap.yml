@@ -17,7 +17,8 @@ version: '3.7'
 
 services:
   device-coap:
-    image: ${REPOSITORY}/device-coap${ARCH}:${DEVICE_COAP_VERSION}
+    #image: ${REPOSITORY}/device-coap${ARCH}:${DEVICE_COAP_VERSION}
+    image: edgexfoundry/device-coap:2.0.2-dev.8-dev
     ports:
     - "127.0.0.1:59988:59988"
     - "0.0.0.0:5684:5684/udp" #abilito connessioni in ingresso per connessioni TLS sulla porta 5684
