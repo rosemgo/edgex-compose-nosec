@@ -32,6 +32,9 @@ services:
     environment:
       SERVICE_HOST: edgex-device-mqtt
       MQTTBROKERINFO_HOST: edgex-mqtt-broker
+      MQTTBROKERINFO_INCOMINGTOPIC: "incoming/data/#" #(DATA TOPIC) topic usato da EdgeX per ricevere i dati in modalità asyncrona
+      MQTTBROKERINFO_RESPONSETOPIC: "command/response/#" #(RESPONSE TOPIC) topic usato da EdgeX per ricevere i dati in seguito ad un comando inviati 
+      MQTTBROKERINFO_USETOPICLEVELS: "true"
     depends_on:
       - consul
       - data
