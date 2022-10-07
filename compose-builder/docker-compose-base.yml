@@ -167,7 +167,8 @@ services:
     image: ${CORE_EDGEX_REPOSITORY}/core-command${ARCH}:${CORE_EDGEX_VERSION}${DEV}
     user: "${EDGEX_USER}:${EDGEX_GROUP}"
     ports:
-      - "127.0.0.1:59882:59882"
+      #- "127.0.0.1:59882:59882"
+      - "0.0.0.0:59882:59882"
     container_name: edgex-core-command
     hostname: edgex-core-command
     read_only: true
